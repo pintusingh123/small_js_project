@@ -1,42 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Index Finder</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <title>Enhanced Array Finder</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200 flex justify-center items-center h-screen">
-
-    <div class=" border-2 animate__animated animate__backInDown   ani g-white p-6 rounded-lg shadow-lg w-96 text-center">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">Array Index Finder</h2>
-
-        <!-- Array Display -->
-        <p class="text-gray-600 text-sm mb-4">Array: 
-            <span id="inputArray" class="font-mono text-blue-600"> </span>
-        </p>
-
-        <!-- Input Field -->
-        <input type="number" id="element" placeholder="Enter index number"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
-
-        <!-- Button -->
-        <button onclick="findEle()"
-            class="w-full bg-gray-900 hover:bg-gray-600 text-white font-semibold py-2 rounded-md">
-            Find Array Value
-        </button>
-
-        <!-- Result Display -->
-        <p id="result" class="mt-4 text-lg font-bold text-gray-700"></p>
-    </div>
-
-    <script src="index.js">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
     
+    <div class="bg-white p-3 rounded-lg shadow-lg w-full max-w-lg text-center">
+        <h2 class="text-xl font-semibold mb-4">Enter Array Elements</h2>
+       <div class="flex" >
+        <input type="text" id="arrayInput" placeholder="Enter elements separated by space" class="border p-2 rounded w-[80%] mb-2">
+        <button onclick="storeArray()" class="bg-gray-800 hover:bg-black text-white ml-1 h-10 w-[20%] rounded">Store Array</button>
+       </div>
+        
+        <p id="inputArray" class="mt-4 font-semibold"></p>
+        
+        <h3 class="mt-4 text-lg font-semibold">Find Element by Index</h3>
+      <div class="flex mt-3 ">
+        <input type="text" id="element" placeholder="Enter index number" class="border p-2 rounded w-[80%] mb-2">
+        <button onclick="findEle()" class="bg-gray-800
+         hover:bg-black text-white ml-1  h-10 w-[20%] rounded">Find Element</button>
+      </div>
+        
+        <p id="result" class="text-lg mt-4 font-bold"></p>
+        <button onclick="resetArray()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Reset</button>
+    </div>
+    
+    <script src="index.js">
+      
     </script>
-
 </body>
 </html>
